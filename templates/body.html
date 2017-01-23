@@ -1,0 +1,69 @@
+<section id="home" class="home-section">
+    <div class="bg-img"></div>
+    <div style="color:white; position:absolute; top:40%; left:0; right:0; text-align:center;">
+        <h1 style="font-size:88px;">Yifan Zhu</h1>
+        <h1 style="color: #94A3BA;
+    text-transform: uppercase;
+    letter-spacing: 10px;">Software Developer</h1>
+    </div>
+    <div style="text-align: center;
+    position: absolute;
+    top: 85%;
+    left: 0;
+    right: 0;">
+        <img style="border-radius: 50%;
+    height: 250px;
+    width: 250px;
+    border: solid 10px #fff;" src="http://res.cloudinary.com/dihnc49qr/image/upload/v1478480230/IMG_2543_xmrmyw.jpg">
+    </div>
+    </section>
+<section id="experience" class="home-section" layout-margin>
+    <h1>Work Experience</h1>
+    <h4>Company: {{workExp.company}}</h4>
+    <h5>{{workExp.title}} --- {{workExp.duration}}</h5>
+
+    <div>
+        <div uib-carousel active="active">
+            <div uib-slide ng-repeat="project in workExp.projects track by project.id" index="project.id" >
+                <md-content style="text-align: left; height:400px;" layout-padding layout-margin>
+                    <p>
+                        Project: {{project.title}}
+                    <ul>
+                        <li ng-repeat="text in project.description">{{text}}.</li>
+                    </ul>
+                    </p>
+                </md-content>
+
+            </div>
+        </div>
+    </div>
+</section>
+<section id="portfolio" class="home-section" layout-margin style="background-color:#f4f4f4;">
+    <h1>Portfolio</h1>
+    <div layout-xs="column" layout="row" layout-wrap>
+     <md-card ng-click="" flex="30">
+        <img ng-src="" class="md-card-image" alt="Washed Out">
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">1</span>
+          </md-card-title-text>
+        </md-card-title>
+      </md-card>
+      <md-card ng-click="" flex="30">
+        <img ng-src="" class="md-card-image" alt="Washed Out">
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">2</span>
+          </md-card-title-text>
+        </md-card-title>
+      </md-card>
+      <md-card ng-click="" flex="30">
+        <img ng-src="" class="md-card-image" alt="Washed Out">
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">3</span>
+          </md-card-title-text>
+        </md-card-title>
+      </md-card>
+    </div>
+</section>
