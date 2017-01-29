@@ -11,21 +11,33 @@
 <section id="experience" class="section-wrapper-even" layout-margin>
     <div class="section-padding">
         <h1>Work Experience</h1>
-        <h4>Company: {{workExp.company}}</h4>
-        <h5>{{workExp.title}} --- {{workExp.duration}}</h5>
-        <div>
-            <div uib-carousel active="active">
-                <div uib-slide ng-repeat="project in workExp.projects track by project.id" index="project.id" >
-                    <md-content class="slider-item">
-                        <p>
-                            Project: {{project.title}}
-                        <ul style="list-style: none;">
-                            <li ng-repeat="text in project.description">{{text}}.</li>
-                        </ul>
-                        </p>
-                    </md-content>
-                </div>
-            </div>
+        <hr class="section-header-seperator">
+        <div layout="row" layout-align="space-between center">
+          <div class="work-info">
+            <h4>{{workExp.company}}</h4>
+            <h4>{{workExp.title}} --- {{workExp.duration}}</h4> 
+          </div>
+          <div>
+            <md-button class="md-raised md-primary" ng-click="preview($event)">
+              <i class="fa fa-file-text-o" aria-hidden="true"></i>&nbsp
+              Download CV
+            </md-button>
+          </div>
+        </div>  
+        <div uib-carousel active="active">
+          <div uib-slide ng-repeat="project in workExp.projects track by project.id" index="project.id" >
+            <md-content class="slider-item" layout="row">
+              <div flex="50">
+                <img class="slider-item-image" style="" src="{{project.image}}">
+              </div>
+              <div flex="50" class="slider-item-text">
+                <p class="project-title" style=" ">Project Name </p>
+                <p class="project-description">{{project.title}}</p>
+                <p class="project-title">Description</p>
+                <p class="project-description">{{project.description}}</p>
+              </div>  
+            </md-content>
+          </div>
         </div>
     </div>
 </section>

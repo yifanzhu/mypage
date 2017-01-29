@@ -19,6 +19,11 @@
 	height: 100%;
 }
 
+.section-header-seperator {
+	width:40%; 
+	margin-left:0;
+}
+
 #home .bg-img {
   	padding: 300px;
 	height: 100%;
@@ -66,15 +71,40 @@
 	border: solid 10px #fff;
 }
 
+#experience .work-info {
+	color: #73879C; 
+	font-size: 20px;
+}
+
 #experience .carousel-control.left, .carousel-control.right {
 	background-image: none;
 	width: auto;
 }
 
 #experience .slider-item {
-	padding: 5em;
+	padding: 3em;
 	text-align: left;
 	height:400px;
+}
+
+#experience .slider-item-image {
+	width:90%; 
+	height:100%;
+}
+
+#experience .slider-item-text {
+	text-transform: uppercase;
+	font-weight: 300;
+}
+
+#experience .project-title {
+	color: #73879C; 
+	font-size: 20px;
+}
+
+#experience .project-description {
+	color: #6f6f6f;
+	font-size: 18px;
 }
 
 .demo-menu-example {
