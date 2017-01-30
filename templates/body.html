@@ -8,10 +8,14 @@
         <img class="profile-img" src="http://res.cloudinary.com/dihnc49qr/image/upload/v1478480230/IMG_2543_xmrmyw.jpg">
     </div>
 </section>
-<section id="experience" class="section-wrapper-even" layout-margin>
+<section id="experience" class="section-wrapper-even">
     <div class="section-padding">
         <h1>Work Experience</h1>
-        <hr class="section-header-seperator">
+        <div layout="row" layout-align="start center">
+            <hr class="section-header-separator">
+            <i class="fa fa-briefcase fa-lg section-separator-icon" aria-hidden="true"></i>
+            <hr class="section-header-separator">
+        </div>
         <div layout="row" layout-align="space-between center">
           <div class="work-info">
             <h4>{{workExp.company}}</h4>
@@ -28,7 +32,7 @@
           <div uib-slide ng-repeat="project in workExp.projects track by project.id" index="project.id" >
             <md-content class="slider-item" layout="row">
               <div flex="50">
-                <img class="slider-item-image" style="" src="{{project.image}}">
+                <img class="slider-item-image" src="{{project.image}}">
               </div>
               <div flex="50" class="slider-item-text">
                 <p class="project-title" style=" ">Project Name </p>
@@ -41,34 +45,108 @@
         </div>
     </div>
 </section>
-<section id="portfolio" class="section-wrapper-odd" layout-margin>
+<section id="portfolio" class="section-wrapper-odd">
     <div class="section-padding">
         <h1>Portfolio</h1>
+        <div layout="row" layout-align="start center">
+            <hr class="section-header-separator">
+            <i class="fa fa-file-text fa-lg section-separator-icon" aria-hidden="true"></i>
+            <hr class="section-header-separator">
+        </div>
         <div layout-xs="column" layout="row" layout-wrap>
-         <md-card ng-click="" flex="30">
-            <img ng-src="" class="md-card-image" alt="Washed Out">
+         <md-card flex="30" ng-repeat="project in portfolio.projects">
+            <img src="{{project.image}}" class="md-card-image" alt="Washed Out">
             <md-card-title>
-              <md-card-title-text>
-                <span class="md-headline">1</span>
-              </md-card-title-text>
-            </md-card-title>
-          </md-card>
-          <md-card ng-click="" flex="30">
-            <img ng-src="" class="md-card-image" alt="Washed Out">
-            <md-card-title>
-              <md-card-title-text>
-                <span class="md-headline">2</span>
-              </md-card-title-text>
-            </md-card-title>
-          </md-card>
-          <md-card ng-click="" flex="30">
-            <img ng-src="" class="md-card-image" alt="Washed Out">
-            <md-card-title>
-              <md-card-title-text>
-                <span class="md-headline">3</span>
+                <md-card-title-text>
+                    <h5 class="project-title">Project Name</h5>
+                    <p>{{project.name}}</p>
+                    <h5 class="project-title">Source Code</h5>
+                    <p><a href="{{project.sourceCode}}">{{project.sourceCode}}</a></p>
+                    <p class="preview-button-wrapper">
+                        <a class="preview-button-link" href="{{project.page}}">Page View</a>
+                    </p>
               </md-card-title-text>
             </md-card-title>
           </md-card>
         </div>
+    </div>
+</section>
+<section id="contact" class="section-wrapper-even">
+    <div class="section-padding">
+        <h1>Contact</h1>
+        <div layout="row" layout-align="start center">
+            <hr class="section-header-separator">
+            <i class="fa fa-envelope fa-lg section-separator-icon" aria-hidden="true"></i>
+            <hr class="section-header-separator">
+        </div>
+        <md-content>
+            <div layout="row">
+                <div flex="20">
+                    <h2 class="contact-title">Address</h2>
+                    <h4 class="contact-text">306 Prettyman Dr. <br>
+                        Rockville, Maryland, <br>
+                        20850</h4>
+                    <h2 class="contact-title">Phone</h2>
+                    <h4 class="contact-text">(202)-602-8333</h4>
+                    <h2 class="contact-title">Email</h2>
+                    <h4 class="contact-text">yfzsherry@gmail.com</h4>
+                </div>
+                <div id="map" flex="80" class="google-map"></div>
+            </div>
+            <form name="contactForm" layout="column" class="md-whiteframe-2dp card-wrapper">
+                <div layout="row" layout-align="start stretch">
+                    <md-input-container class="md-icon-float md-block" flex>
+                        <label>Subject</label>
+                        <md-icon>
+                            <ng-md-icon icon="subject" style="fill: pink"></ng-md-icon>
+                        </md-icon>
+                        <input ng-model="user.name" type="text">
+                    </md-input-container>
+
+                    <md-input-container class=" md-icon-float md-block" flex>
+                        <label>Phone Number</label>
+                        <md-icon>
+                            <ng-md-icon icon="phone" style="fill: pink"></ng-md-icon>
+                        </md-icon>
+                        <input ng-model="user.phone" type="text" ng-pattern="/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/">
+                        <div class="hint">###-###-####</div>
+                    </md-input-container>
+                    <md-input-container class="md-block" flex>
+                        <label>Email</label>
+                        <md-icon>
+                            <ng-md-icon icon="email" style="fill: pink"></ng-md-icon>
+                        </md-icon>
+                        <input name="email" ng-model="user.email" type="email" required>
+                        <div ng-messages="contactForm.email.$error">
+                            <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+                                Your email must look like an e-mail address.
+                            </div>
+                        </div>
+                    </md-input-container>
+                </div>
+                <div>
+                    <md-input-container class="md-block">
+                        <label>Message</label>
+                        <md-icon>
+                            <ng-md-icon icon="message" style="fill: pink"></ng-md-icon>
+                        </md-icon>
+                        <textarea name="message" ng-model="user.biography" md-maxlength="200" rows="5" md-select-on-focus></textarea>
+                        <div ng-messages="contactForm.message.$error">
+                            <div ng-message-exp="['maxlength']">
+                                Your message must be no longer than 200 characters.
+                            </div>
+                        </div>
+                    </md-input-container>
+                </div>
+                <div>
+                    <md-button class="md-raised" ng-disabled="contactForm.$invalid">
+                        <md-icon>
+                            <ng-md-icon icon="send" style="fill: pink"></ng-md-icon>
+                        </md-icon>
+                        Send Message
+                    </md-button>
+                </div>
+            </form>
+        </md-content>
     </div>
 </section>

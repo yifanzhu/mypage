@@ -9,6 +9,7 @@ require.config({
         'angular-material-icons': 'bower_components/angular-material-icons/angular-material-icons.min',
         'angular-messages': 'bower_components/angular-messages/angular-messages.min',
         'angular-sanitize': 'bower_components/angular-sanitize/angular-sanitize.min',
+        'google-maps': 'bower_components/google-maps/lib/Google',
         jquery: 'bower_components/jquery/dist/jquery.min',
         lodash: 'bower_components/lodash/lodash'
     },

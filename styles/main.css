@@ -6,7 +6,7 @@
 }
 
 .section-padding {
-	padding:3em;
+	padding: 2em;
 }
 
 .section-wrapper-even {
@@ -19,9 +19,16 @@
 	height: 100%;
 }
 
-.section-header-seperator {
-	width:40%; 
+.section-header-separator {
+	color: #b7b7b7;
+	width:10%;
+	margin-right: 0;
 	margin-left:0;
+}
+
+.section-separator-icon {
+	margin:1em;
+	color: #b7b7b7;
 }
 
 #home .bg-img {
@@ -105,6 +112,46 @@
 #experience .project-description {
 	color: #6f6f6f;
 	font-size: 18px;
+}
+
+#portfolio .project-title {
+	font-weight:300;
+	text-transform: uppercase;
+	margin: 0;
+}
+
+#portfolio .preview-button-wrapper {
+	margin-top: 1.5em;
+}
+
+#portfolio .preview-button-link {
+	border: 1px solid #6687a9;
+	padding: 0.6em 2.2em;
+	color: #6687a9;
+	border-radius: 5px;
+}
+
+#portfolio .preview-button-link:hover {
+	text-decoration: none;
+}
+
+#contact .card-wrapper {
+	padding: 2em;
+	margin: 2em 0.2em;
+}
+
+#contact .google-map {
+	width:100%;
+	height:400px;
+}
+
+#contact .contact-title {
+	font-weight:300;
+	text-transform: uppercase;
+}
+
+#contact .contact-text {
+	font-weight:300;
 }
 
 .demo-menu-example {
