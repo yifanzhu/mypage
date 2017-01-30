@@ -67,6 +67,12 @@ define(['./module', 'google-maps'], function (app, googleLoader) {
                 ]
             };
 
+            $scope.sendEmail = function() {
+
+            };
+
+            googleLoader.KEY = 'qwertyuiopasdfghjklzxcvbnm';
+
             googleLoader.load(function(google) {
                 var myLatLng = {lat: 39.0947378, lng: -77.1959366},
                     mapOptions = {
