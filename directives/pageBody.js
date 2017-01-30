@@ -71,7 +71,7 @@ define(['./module', 'google-maps'], function (app, googleLoader) {
 
             };
 
-            googleLoader.KEY = 'qwertyuiopasdfghjklzxcvbnm';
+            googleLoader.KEY = 'AIzaSyAal8mqIjEPvhJ7LbIvAFZmc9Q_2dlEdmw';
 
             googleLoader.load(function(google) {
                 var myLatLng = {lat: 39.0947378, lng: -77.1959366},
