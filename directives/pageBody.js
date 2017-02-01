@@ -31,19 +31,19 @@ define(['./module', 'google-maps'], function (app, googleLoader) {
                         id:0,
                         title: 'Consumables Management System(Mobile Version)',
                         image: 'https://res.cloudinary.com/dihnc49qr/image/upload/v1478314764/photo-1453928582365-b6ad33cbcf64_t0ixly.jpg',
-                        description: 'An inventory management system for mobile'
+                        description: 'iOS and Android version of Consumables Management System.'
                     },
                     {
                         id:1,
                         title: 'Consumables Management System',
-                        image: 'https://res.cloudinary.com/dihnc49qr/image/upload/v1478314764/photo-1453928582365-b6ad33cbcf64_t0ixly.jpg',
-                        description: 'An inventory management system'
+                        image: 'http://res.cloudinary.com/dihnc49qr/image/upload/v1485975509/Screen_Shot_2017-02-01_at_1.33.19_PM_eood75.png',
+                        description: 'A Check-In and Check-Out system which can track consumables in and out, generate barcodes for consumables, assign locations to consumables and check stock level for consumables.'
                     },
                     {
                         id:2,
                         title: 'Freezer Management System',
-                        image: 'https://res.cloudinary.com/dihnc49qr/image/upload/v1478314764/photo-1453928582365-b6ad33cbcf64_t0ixly.jpg',
-                        description: 'An sample management system for lab'
+                        image: 'http://res.cloudinary.com/dihnc49qr/image/upload/v1485975509/Screen_Shot_2017-02-01_at_1.34.53_PM_zyvrkb.png',
+                        description: 'An application which can help user map and manage relations among freezers, donors and derivatives.'
                     }
                 ]
             };
