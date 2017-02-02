@@ -62,7 +62,7 @@ define(['./module', 'google-maps'], function (app, googleLoader) {
                         name: 'My Moment',
                         image: 'http://res.cloudinary.com/dihnc49qr/image/upload/v1485998231/Screen_Shot_2017-02-01_at_8.16.52_PM_csgvff.png',
                         sourceCode: 'https://github.com/yifanzhu/mymoment',
-                        page: 'https://yifanblog.herokuapp.com'
+                        page: 'https://yifanmoment.herokuapp.com'
                     },
                     {
                         id:1,
