@@ -63,7 +63,7 @@
                     <h5 class="project-title">Source Code</h5>
                     <p><a href="{{project.sourceCode}}">{{project.sourceCode}}</a></p>
                     <p class="preview-button-wrapper">
-                        <a class="preview-button-link" href="{{project.page}}">Page View</a>
+                        <a class="preview-button-link" ng-if="project.page" href="{{project.page}}">Page View</a>
                     </p>
               </md-card-title-text>
             </md-card-title>
